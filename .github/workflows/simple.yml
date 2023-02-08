@@ -1,5 +1,7 @@
 name: Setting up my first workflow
-on: [pull_request]
+on: 
+  schedule:
+    - cron: "0/5 * * * *"
 
 jobs:
   run-shell-command:
