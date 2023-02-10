@@ -1,14 +1,13 @@
-name: My first workflow 
-run-name: ${{github.actor}} is output of Github actor
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
-
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
-    steps:  
+    steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-        with: 
+        with:
           node-version: '14'
-      - runs: npm install -g bats
-      - runs: bats -v
+      - run: npm install -g bats
+      - run: bats -v
