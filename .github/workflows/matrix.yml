@@ -1,0 +1,19 @@
+name: Matrix workflow
+on: push
+
+jobs: 
+  run-node-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check the node version
+        run: |
+          node -v
+
+      - name: install specific node version
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: check the node version
+        run: |
+          node -v
