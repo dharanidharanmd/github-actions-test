@@ -23,5 +23,5 @@ jobs:
         env:
           EVENT_CONTEXT: ${{toJSON(github.events)}}
         run: |
-          echo "Github events: ${{EVENT_CONTEXT}}"
+          echo $EVENT_CONTEXT
 
