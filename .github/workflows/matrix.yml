@@ -12,7 +12,7 @@ jobs:
       - name: install specific node version
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 6
 
       - name: check the node version
         run: |
